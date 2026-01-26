@@ -86,21 +86,12 @@ Jesucristo Fuente de Vida - Página Web/
 
 1. Clone this repository:
 ```bash
-git clone https://github.com/your-username/jesucristo-fuente-de-vida.git
+git clone https://github.com/swiftdeskk/jesucristo-fuente-de-vida.git
 ```
 
 2. Open the `index.html` file in your web browser
 
 3. Done! The site is running locally
-
-## 🤝 Contributing
-
-If you'd like to contribute to the project, please:
-1. Fork the project
-2. Create a new branch (`git checkout -b feature/improvement`)
-3. Make your changes and commit (`git commit -m 'Add new feature'`)
-4. Push your changes (`git push origin feature/improvement`)
-5. Open a Pull Request
 
 ## 📧 Contact
 
