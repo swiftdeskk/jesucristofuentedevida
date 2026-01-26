@@ -23,7 +23,7 @@ Jesucristo Fuente de Vida - Página Web/
 │
 ├── CSS/
 │   ├── animations.css      # Animations and transitions
-│   ├── responsive.css       # Responsive design styles
+│   ├── responsive.css      # Responsive design styles
 │   └── style.css           # Main styles
 │
 ├── images/
