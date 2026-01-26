@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Noticias, anuncios, devocionales y testimonios de la Iglesia Jesucristo Fuente de Vida para Todas las Generaciones.">
+    <meta name="keywords" content="blog, noticias, anuncios, devocionales, testimonios, iglesia, eventos">
+    <meta name="author" content="Iglesia Jesucristo Fuente de Vida">
+    
+    <title>Blog y Noticias | Jesucristo Fuente de Vida para Todas las Generaciones</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="../images/favicon.png">
+    <link rel="shortcut icon" type="image/png" href="../images/favicon.png">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+    <link rel="stylesheet" href="../css/animations.css">
+</head>
+<body>
+
+    <!-- ========== NAVEGACIÓN ========== -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="logo-container">
+                <a href="../index.html">
+                    <img src="../images/logo.png" alt="Logo Iglesia Jesucristo Fuente de Vida" class="logo-img">
+                </a>
+                <div class="logo-text">
+                    <span class="logo-main">Jesucristo Fuente de Vida</span>
+                    <span class="logo-sub">Para Todas las Generaciones</span>
+                </div>
+            </div>
+            
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="../index.html" class="nav-link">Inicio</a></li>
+                <li><a href="nosotros.html" class="nav-link">Quiénes Somos</a></li>
+                <li><a href="nuevos.html" class="nav-link">Soy Nuevo</a></li>
+                <li><a href="ministerios.html" class="nav-link">Ministerios</a></li>
+                <li><a href="blog.html" class="nav-link">Blog</a></li>
+                <li><a href="donaciones.html" class="nav-link">Donaciones</a></li>
+                <li><a href="contacto.html" class="nav-link">Contacto</a></li>
+            </ul>
+            
+            <button class="mobile-toggle" id="mobileToggle" aria-label="Abrir menú">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- ========== HERO INTERNO ========== -->
+    <section class="page-hero">
+        <div class="page-hero-overlay"></div>
+        <div class="container">
+            <div class="page-hero-content">
+                <h1 class="page-hero-title fade-in">Blog y Noticias</h1>
+                <p class="page-hero-subtitle fade-in-delay">
+                    Mantente informado sobre lo que Dios está haciendo en nuestra iglesia
+                </p>
+                <div class="breadcrumb fade-in-delay-2">
+                    <a href="../index.html"><i class="fas fa-home"></i> Inicio</a>
+                    <i class="fas fa-chevron-right"></i>
+                    <span>Blog</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== CATEGORÍAS ========== -->
+    <section class="categories-section">
+        <div class="container">
+            <div class="categories-filter">
+                <button class="category-btn active" data-category="all">
+                    <i class="fas fa-th"></i> Todas
+                </button>
+                <button class="category-btn" data-category="anuncios">
+                    <i class="fas fa-bullhorn"></i> Anuncios
+                </button>
+                <button class="category-btn" data-category="eventos">
+                    <i class="fas fa-calendar-alt"></i> Eventos
+                </button>
+                <button class="category-btn" data-category="devocionales">
+                    <i class="fas fa-book-open"></i> Devocionales
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== ARTÍCULO DESTACADO ========== -->
+    <section class="section featured-post-section">
+        <div class="container">
+            <div class="featured-post">
+                <div class="featured-post-image">
+                    <img src="../images/blog/retiro-jovenes.jpg" alt="Retiro de Jóvenes" onerror="this.src='https://via.placeholder.com/800x450/4A90E2/FFFFFF?text=Retiro+de+Jóvenes'">
+                    <div class="featured-badge">
+                        <i class="fas fa-star"></i> Destacado
+                    </div>
+                </div>
+                <div class="featured-post-content">
+                    <div class="post-category">
+                        <i class="fas fa-bullhorn"></i> Noticia
+                    </div>
+                    <h2 class="featured-post-title">Recientemente vivimos un poderoso Retiro de Jóvenes</h2>
+                    <div class="post-meta">
+                        <span><i class="far fa-calendar"></i> Enero 2026</span>
+                        <span><i class="far fa-user"></i> Ministerio de Jóvenes</span>
+                        <span><i class="far fa-clock"></i> 2 min lectura</span>
+                    </div>
+                    <p class="featured-post-excerpt">
+                        Hace poco vivimos un tiempo especial en nuestro Retiro de Jóvenes, donde fuimos ministrados por la 
+                        presencia de Dios, fortalecidos en la Palabra y unidos como generación. Fueron días de adoración, 
+                        enseñanza y decisiones que marcaron vidas. Agradecemos a Dios por todo lo que hizo y por lo que 
+                        seguirá haciendo en nuestros jóvenes.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<!-- ========== ARTÍCULOS DEL BLOG ========== -->
+    <section class="section blog-posts-section">
+        <div class="container">
+            <div class="blog-grid">
+
+                <!-- Post 1 (Más reciente) -->
+                <article class="blog-card" data-category="eventos">
+                    <div class="blog-image">
+                        <img src="../images/blog/post-1.jpg" alt="Retiro de Jóvenes">
+                        <div class="blog-category-badge categoria-eventos">
+                            <i class="fas fa-calendar-alt"></i> Evento
+                        </div>
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span><i class="far fa-calendar"></i> 18 Ene 2026</span>
+                            <span><i class="far fa-user"></i> Líder de Jóvenes</span>
+                        </div>
+                        <h3 class="blog-title">Retiro de Jóvenes: Un Fin de Semana con Dios</h3>
+                        <p class="blog-excerpt">
+                            Los jóvenes de nuestra iglesia vivieron un fin de semana inolvidable en nuestro retiro anual...
+                        </p>
+                    </div>
+                </article>
+
+                <!-- Post 2 -->
+                <article class="blog-card" data-category="anuncios">
+                    <div class="blog-image">
+                        <img src="../images/blog/post-4.jpg" alt="Apertura de cupos en ministerios">
+                        <div class="blog-category-badge categoria-anuncios">
+                            <i class="fas fa-bullhorn"></i> Anuncio
+                        </div>
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span><i class="far fa-calendar"></i> 17 Ene 2026</span>
+                            <span><i class="far fa-user"></i> Administración</span>
+                        </div>
+                        <h3 class="blog-title">Cupos abiertos en todos nuestros ministerios</h3>
+                        <p class="blog-excerpt">
+                            Hemos abierto nuevos cupos para que puedas unirte a cualquiera de nuestros ministerios...
+                        </p>
+                    </div>
+                </article>
+
+                <!-- Post 3 -->
+                <article class="blog-card" data-category="eventos">
+                    <div class="blog-image">
+                        <img src="../images/blog/post-5.jpg" alt="Noche de adoración">
+                        <div class="blog-category-badge categoria-eventos">
+                            <i class="fas fa-calendar-alt"></i> Evento
+                        </div>
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span><i class="far fa-calendar"></i> 17 Ene 2026</span>
+                            <span><i class="far fa-user"></i> Ministerio de Alabanza</span>
+                        </div>
+                        <h3 class="blog-title">Noche de Adoración: Un Encuentro Especial</h3>
+                        <p class="blog-excerpt">
+                            Vivimos una noche gloriosa de adoración donde la presencia de Dios se manifestó...
+                        </p>
+                    </div>
+                </article>
+
+                <!-- Post 4 -->
+                <article class="blog-card" data-category="devocionales">
+                    <div class="blog-image">
+                        <img src="../images/blog/post-6.jpg" alt="Devocional Año Nuevo">
+                        <div class="blog-category-badge categoria-devocionales">
+                            <i class="fas fa-book-open"></i> Devocional
+                        </div>
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span><i class="far fa-calendar"></i> 1 Ene 2026</span>
+                            <span><i class="far fa-user"></i> Pastor Principal</span>
+                        </div>
+                        <h3 class="blog-title">Empezar el Año con Propósito</h3>
+                        <p class="blog-excerpt">
+                            Un nuevo año es una oportunidad para comenzar de nuevo...
+                        </p>
+                    </div>
+                </article>
+
+                <!-- Post 5 -->
+                <article class="blog-card" data-category="eventos">
+                    <div class="blog-image">
+                        <img src="../images/blog/post-3.jpg" alt="Navidad con los niños">
+                        <div class="blog-category-badge categoria-eventos">
+                            <i class="fas fa-calendar-alt"></i> Evento
+                        </div>
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span><i class="far fa-calendar"></i> 25 Dic 2025</span>
+                            <span><i class="far fa-user"></i> Ministerio de Jóvenes</span>
+                        </div>
+                        <h3 class="blog-title">Jóvenes llevando alegría a los niños en Navidad</h3>
+                        <p class="blog-excerpt">
+                            Nuestro Ministerio de Jóvenes visitó a varios niños para compartir regalos...
+                        </p>
+                    </div>
+                </article>
+
+                <!-- Post 6 (Más antiguo) -->
+                <article class="blog-card" data-category="devocionales">
+                    <div class="blog-image">
+                        <img src="../images/blog/post-2.jpg" alt="Devocional">
+                        <div class="blog-category-badge categoria-devocionales">
+                            <i class="fas fa-book-open"></i> Devocional
+                        </div>
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span><i class="far fa-calendar"></i> 21 Dic 2025</span>
+                            <span><i class="far fa-user"></i> Pastor</span>
+                        </div>
+                        <h3 class="blog-title">La Fidelidad de Dios en Tiempos Difíciles</h3>
+                        <p class="blog-excerpt">
+                            Cuando atravesamos momentos complicados, es fácil dudar...
+                        </p>
+                    </div>
+                </article>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== SUSCRIPCIÓN ========== -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2 class="cta-title">No Te Pierdas Nuestras Actualizaciones</h2>
+                <p class="cta-text">
+                    Suscríbete a nuestro boletín y recibe las últimas noticias, devocionales 
+                    y anuncios directamente en tu correo.
+                </p>
+                <div class="newsletter-form">
+                    <input type="email" placeholder="Tu correo electrónico" class="newsletter-input">
+                    <button class="btn btn-white">
+                        <i class="fas fa-envelope"></i> Suscribirme
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== FOOTER ========== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Jesucristo Fuente de Vida</h3>
+                    <p>
+                        Una iglesia comprometida con predicar el evangelio de Jesucristo 
+                        a todas las generaciones.
+                    </p>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/jesucristofuentedevidahuaral" target="_blank" aria-label="Facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+
+                        <a href="https://instagram.com" target="_blank" aria-label="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://tiktok.com" target="_blank" aria-label="TikTok">
+                            <i class="fab fa-tiktok"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Enlaces Rápidos</h3>
+                    <ul>
+                        <li><a href="nosotros.html">Quiénes Somos</a></li>
+                        <li><a href="ministerios.html">Ministerios</a></li>
+                        <li><a href="../index.html#anexos">Anexos</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Recursos</h3>
+                    <ul>
+                        <li><a href="nuevos.html">Soy Nuevo</a></li>
+                        <li><a href="donaciones.html">Donaciones</a></li>
+                        <li><a href="galeria.html">Galería</a></li>
+                        <li><a href="contacto.html">Contacto</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Contacto</h3>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt"></i> Av. Lima 185, Huaral 15202, Lima, Perú</li>
+                        <li><i class="fas fa-phone"></i> +51 981 419 472</li>
+                        <li><i class="fas fa-envelope"></i> contacto@jfvtg.org</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2026 Jesucristo Fuente de Vida para Todas las Generaciones. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ========== BOTÓN FLOTANTE WHATSAPP ========== -->
+    <a href="https://wa.me/51981419472" class="whatsapp-float" target="_blank" aria-label="WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- ========== JAVASCRIPT FILES ========== -->
+    <script src="../js/main.js"></script>
+    <script src="../js/animations.js"></script>
+    <script src="../js/blog.js"></script>
+    
+</body>
+</html>

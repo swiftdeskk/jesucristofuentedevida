@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Iglesia Jesucristo Fuente de Vida para Todas las Generaciones. Un lugar de fe, esperanza y comunidad en Huaral.">
+    <meta name="keywords" content="iglesia cristiana, Jesús, fe, comunidad, prédicas, Huaral, Lima">
+    <meta name="author" content="Iglesia Jesucristo Fuente de Vida">
+    
+    <title>Jesucristo Fuente de Vida para Todas las Generaciones | Iglesia Cristiana</title>
+    
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
+
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/animations.css">
+</head>
+<body>
+
+    <!-- ========== NAVEGACIÓN ========== -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="logo-container">
+                <img src="images/logo.png" alt="Logo Iglesia Jesucristo Fuente de Vida" class="logo-img">
+                <div class="logo-text">
+                    <span class="logo-main">Jesucristo Fuente de Vida</span>
+                    <span class="logo-sub">Para Todas las Generaciones</span>
+                </div>
+            </div>
+            
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html" class="nav-link">Inicio</a></li>
+                <li><a href="pages/nosotros.html" class="nav-link">Quiénes Somos</a></li>
+                <li><a href="pages/nuevos.html" class="nav-link">Soy Nuevo</a></li>
+                <li><a href="pages/ministerios.html" class="nav-link">Ministerios</a></li>
+                <li><a href="pages/blog.html" class="nav-link">Blog</a></li>
+                <li><a href="pages/donaciones.html" class="nav-link">Donaciones</a></li>
+                <li><a href="pages/contacto.html" class="nav-link">Contacto</a></li>
+            </ul>
+
+            
+            <button class="mobile-toggle" id="mobileToggle" aria-label="Abrir menú">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- ========== HERO SECTION ========== -->
+    <section class="hero" id="inicio">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1 class="hero-title fade-in">Bienvenido a Tu Casa Espiritual</h1>
+            <div class="hero-verse fade-in-delay">
+                <p class="verse-text">"Jesús le dijo: Yo soy el camino, la verdad y la vida"</p>
+                <p class="verse-ref">— Juan 14:6</p>
+            </div>
+            <p class="hero-description fade-in-delay-2">
+                Un lugar donde todas las generaciones encuentran vida abundante en Cristo
+            </p>
+            <div class="hero-buttons fade-in-delay-3">
+                <a href="#horarios" class="btn btn-primary">
+                    <i class="fas fa-church"></i> Visítanos
+                </a>
+                <a href="pages/nosotros.html" class="btn btn-secondary">
+                    <i class="fas fa-info-circle"></i> Conócenos
+                </a>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </section>
+
+    <!-- ========== HORARIOS DE CULTOS ========== -->
+    <section class="section schedule-section" id="horarios">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Nuestros Horarios</h2>
+                <p class="section-subtitle">Te esperamos con los brazos abiertos</p>
+            </div>
+            
+            <div class="schedule-grid">
+                <div class="schedule-card">
+                    <div class="schedule-icon">
+                        <i class="fas fa-sun"></i>
+                    </div>
+                    <h3 class="schedule-title">Culto Dominical</h3>
+                    <p class="schedule-time">10:30 AM & 7:00 PM</p>
+                    <p class="schedule-desc">Alabanza, adoración y predicación de la Palabra de Dios</p>
+                </div>
+                
+                <div class="schedule-card">
+                    <div class="schedule-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3 class="schedule-title">Reunión de Jóvenes</h3>
+                    <p class="schedule-time">Sábado 4:00 PM</p>
+                    <p class="schedule-desc">Comunión y edificación para la nueva generación</p>
+                </div>
+                
+                <div class="schedule-card">
+                    <div class="schedule-icon">
+                        <i class="fas fa-book-open"></i>
+                    </div>
+                    <h3 class="schedule-title">Escuelita Bíblica</h3>
+                    <p class="schedule-time">Sábado 10:00 AM</p>
+                    <p class="schedule-desc">Enseñanza bíblica para niños y adolescentes con amor</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== QUIÉNES SOMOS ========== -->
+    <section class="section about-section" id="nosotros">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Quiénes Somos</h2>
+                <p class="section-subtitle">Una iglesia comprometida con el evangelio de Cristo</p>
+            </div>
+            
+            <div class="about-grid">
+                <div class="about-card">
+                    <div class="about-icon">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h3 class="about-title">Nuestra Misión</h3>
+                    <p class="about-text">
+                        Compartir el amor de Cristo con todas las generaciones, formando discípulos 
+                        que transformen sus familias y comunidades a través del evangelio.
+                    </p>
+                </div>
+                
+                <div class="about-card">
+                    <div class="about-icon">
+                        <i class="fas fa-eye"></i>
+                    </div>
+                    <h3 class="about-title">Nuestra Visión</h3>
+                    <p class="about-text">
+                        Ser una iglesia multigeneracional donde cada persona encuentre en Jesucristo 
+                        la fuente de vida abundante, creciendo en fe y sirviendo con amor.
+                    </p>
+                </div>
+                
+                <div class="about-card">
+                    <div class="about-icon">
+                        <i class="fas fa-bible"></i>
+                    </div>
+                    <h3 class="about-title">Nuestros Valores</h3>
+                    <p class="about-text">
+                        Fe en Cristo, Amor genuino, Integridad bíblica, Comunidad familiar, 
+                        Servicio desinteresado y Adoración sincera.
+                    </p>
+                </div>
+            </div>
+            
+            <div class="about-cta">
+                <a href="pages/nosotros.html" class="btn btn-primary">
+                    <i class="fas fa-info-circle"></i> Conoce Más Sobre Nosotros
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== MINISTERIOS ========== -->
+    <section class="section ministries-section" id="ministerios">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Nuestros Ministerios</h2>
+                <p class="section-subtitle">Un lugar para servir y crecer en Cristo</p>
+            </div>
+            
+            <div class="ministry-grid">
+                <div class="ministry-card">
+                    <div class="ministry-icon">
+                        <i class="fas fa-baby"></i>
+                    </div>
+                    <h3 class="ministry-title">Niños</h3>
+                    <p class="ministry-desc">
+                        Formando la fe de los más pequeños con amor, enseñanza bíblica 
+                        y actividades divertidas que los acercan a Jesús.
+                    </p>
+                    <a href="pages/ministerios.html#ninos" class="ministry-link">
+                        Más información <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+                
+                <div class="ministry-card">
+                    <div class="ministry-icon">
+                        <i class="fas fa-rocket"></i>
+                    </div>
+                    <h3 class="ministry-title">Jóvenes</h3>
+                    <p class="ministry-desc">
+                        Preparando a la nueva generación para un encuentro real con Cristo 
+                        y desarrollando líderes del mañana.
+                    </p>
+                    <a href="pages/ministerios.html#jovenes" class="ministry-link">
+                        Más información <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+                
+                <div class="ministry-card">
+                    <div class="ministry-icon">
+                        <i class="fas fa-music"></i>
+                    </div>
+                    <h3 class="ministry-title">Alabanza</h3>
+                    <p class="ministry-desc">
+                        Adorando a Dios en espíritu y en verdad, llevando su presencia 
+                        a través de la música y el canto congregacional.
+                    </p>
+                    <a href="pages/ministerios.html#alabanza" class="ministry-link">
+                        Más información <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+                
+                <div class="ministry-card">
+                    <div class="ministry-icon">
+                        <i class="fas fa-praying-hands"></i>
+                    </div>
+                    <h3 class="ministry-title">Intercesión</h3>
+                    <p class="ministry-desc">
+                        Un equipo dedicado a interceder por las necesidades de la iglesia, 
+                        la comunidad y el mundo entero.
+                    </p>
+                    <a href="pages/ministerios.html#intercesion" class="ministry-link">
+                        Más información <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+                
+                <div class="ministry-card">
+                    <div class="ministry-icon">
+                        <i class="fas fa-hands-helping"></i>
+                    </div>
+                    <h3 class="ministry-title">Ayuda Social</h3>
+                    <p class="ministry-desc">
+                        Extendiendo el amor de Cristo a los más necesitados mediante 
+                        acciones concretas de servicio y apoyo.
+                    </p>
+                    <a href="pages/ministerios.html#ayuda-social" class="ministry-link">
+                        Más información <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+                
+                <div class="ministry-card">
+                    <div class="ministry-icon">
+                        <i class="fas fa-user-shield"></i>
+                    </div>
+                    <h3 class="ministry-title">Encargados</h3>
+                    <p class="ministry-desc">
+                        Líderes comprometidos con el orden, la seguridad y el bienestar 
+                        de cada persona que visita nuestra iglesia.
+                    </p>
+                    <a href="pages/ministerios.html#encargados" class="ministry-link">
+                        Más información <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== ANEXOS ========== -->
+    <section class="section anexos-section" id="anexos">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Nuestros Anexos</h2>
+                <p class="section-subtitle">Llevando la Palabra de Dios a diferentes lugares de nuestra comunidad</p>
+            </div>
+            
+            <!-- Zona Norte -->
+            <div class="anexos-zone">
+                <div class="zone-header">
+                    <div class="zone-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <h3 class="zone-title">Zona Norte - Santa Rosa</h3>
+                </div>
+                
+                <div class="anexos-grid">
+                    <div class="anexo-card">
+                        <div class="anexo-icon">
+                            <i class="fas fa-home"></i>
+                        </div>
+                        <h4 class="anexo-name">Los Jardines</h4>
+                        <p class="anexo-status">
+                            <i class="fas fa-check-circle"></i> Activo
+                        </p>
+                    </div>
+                    
+                    <div class="anexo-card">
+                        <div class="anexo-icon">
+                            <i class="fas fa-home"></i>
+                        </div>
+                        <h4 class="anexo-name">Doña Cecilia</h4>
+                        <p class="anexo-status">
+                            <i class="fas fa-check-circle"></i> Activo
+                        </p>
+                    </div>
+                    
+                    <div class="anexo-card">
+                        <div class="anexo-icon">
+                            <i class="fas fa-home"></i>
+                        </div>
+                        <h4 class="anexo-name">Santa Anita</h4>
+                        <p class="anexo-status">
+                            <i class="fas fa-check-circle"></i> Activo
+                        </p>
+                    </div>
+                    
+                    <div class="anexo-card">
+                        <div class="anexo-icon">
+                            <i class="fas fa-home"></i>
+                        </div>
+                        <h4 class="anexo-name">9 de Octubre</h4>
+                        <p class="anexo-status">
+                            <i class="fas fa-check-circle"></i> Activo
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Zona Sur -->
+            <div class="anexos-zone">
+                <div class="zone-header">
+                    <div class="zone-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <h3 class="zone-title">Zona Sur</h3>
+                </div>
+                
+                <div class="anexos-grid">
+                    <div class="anexo-card">
+                        <div class="anexo-icon">
+                            <i class="fas fa-home"></i>
+                        </div>
+                        <h4 class="anexo-name">La Poza San Martín</h4>
+                        <p class="anexo-status">
+                            <i class="fas fa-check-circle"></i> Activo
+                        </p>
+                    </div>
+                    
+                    <div class="anexo-card">
+                        <div class="anexo-icon">
+                            <i class="fas fa-home"></i>
+                        </div>
+                        <h4 class="anexo-name">Estrella de la Mañana</h4>
+                        <p class="anexo-status">
+                            <i class="fas fa-check-circle"></i> Activo
+                        </p>
+                    </div>
+                    
+                    <div class="anexo-card">
+                        <div class="anexo-icon">
+                            <i class="fas fa-home"></i>
+                        </div>
+                        <h4 class="anexo-name">Macatón</h4>
+                        <p class="anexo-status">
+                            <i class="fas fa-check-circle"></i> Activo
+                        </p>
+                    </div>
+                    
+                    <div class="anexo-card">
+                        <div class="anexo-icon">
+                            <i class="fas fa-home"></i>
+                        </div>
+                        <h4 class="anexo-name">Túpac Amaru</h4>
+                        <p class="anexo-status">
+                            <i class="fas fa-check-circle"></i> Activo
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="anexos-info">
+                <div class="info-card">
+                    <i class="fas fa-info-circle"></i>
+                    <p>
+                        Si deseas más información sobre alguno de nuestros anexos, horarios de reuniones 
+                        o cómo llegar, no dudes en <a href="pages/contacto.html">contactarnos</a>.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== TESTIMONIOS ========== -->
+    <section class="section testimonials-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Testimonios</h2>
+                <p class="section-subtitle">Vidas transformadas por el poder de Dios</p>
+            </div>
+            
+            <div class="testimonial-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-quote">
+                        <i class="fas fa-quote-left"></i>
+                    </div>
+                    <p class="testimonial-text">
+                        "Llegué a esta iglesia buscando respuestas y encontré una familia. 
+                        El amor de Cristo se siente en cada culto y mi vida ha sido transformada completamente."
+                    </p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">M</div>
+                        <div class="author-info">
+                            <h4 class="author-name">María González</h4>
+                            <p class="author-role">Miembro desde 2022</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="testimonial-quote">
+                        <i class="fas fa-quote-left"></i>
+                    </div>
+                    <p class="testimonial-text">
+                        "Como joven, encontré un lugar donde puedo crecer espiritualmente y servir a Dios. 
+                        Los líderes son inspiradores y el compañerismo es genuino."
+                    </p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">C</div>
+                        <div class="author-info">
+                            <h4 class="author-name">Carlos Pérez</h4>
+                            <p class="author-role">Ministerio de Jóvenes</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="testimonial-quote">
+                        <i class="fas fa-quote-left"></i>
+                    </div>
+                    <p class="testimonial-text">
+                        "Mis hijos aman la Escuelita Bíblica y yo he crecido muchísimo en mi fe. 
+                        Esta iglesia es un verdadero regalo de Dios para mi familia."
+                    </p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">A</div>
+                        <div class="author-info">
+                            <h4 class="author-name">Ana Rodríguez</h4>
+                            <p class="author-role">Miembro desde 2020</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== LLAMADO A LA ACCIÓN ========== -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2 class="cta-title">¿Primera Vez Aquí?</h2>
+                <p class="cta-text">
+                    Nos encantaría conocerte. Descubre qué esperar en tu primera visita 
+                    y cómo puedes ser parte de nuestra familia en Cristo.
+                </p>
+                <div class="cta-buttons">
+                    <a href="pages/nuevos.html" class="btn btn-white">
+                        <i class="fas fa-user-plus"></i> Soy Nuevo
+                    </a>
+                    <a href="pages/contacto.html" class="btn btn-outline-white">
+                        <i class="fas fa-envelope"></i> Contáctanos
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== UBICACIÓN Y CONTACTO ========== -->
+    <section class="section contact-section" id="contacto">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Visítanos</h2>
+                <p class="section-subtitle">Estamos ubicados en el corazón de Huaral</p>
+            </div>
+            
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Dirección</h3>
+                            <p>Av. Lima 185, Huaral 15202<br>Lima, Perú</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Teléfono</h3>
+                            <p><a href="tel:+51981419472">+51 981 419 472</a></p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Email</h3>
+                            <p><a href="mailto:contacto@jfvtg.org">contacto@jfvtg.org</a></p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Horario de Oficina</h3>
+                            <p>Lunes a Viernes: 9:00 AM - 5:00 PM</p>
+                        </div>
+                    </div>
+                </div>
+                    <div class="map-container">
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3909.7635669498286!2d-77.2185934240372!3d-11.49697233190986!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x91068b551f061d85%3A0x3de02b02bf81fb89!2sIglesia%20Cristiana%20Jesucristo%20Fuente%20De%20Vida%20Para%20Todas%20Las%20Generaciones!5e0!3m2!1ses-419!2spe!4v1768841606537!5m2!1ses-419!2spe"
+                            width="100%" 
+                            height="100%" 
+                            style="border:0;" 
+                            allowfullscreen 
+                            loading="lazy">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== FOOTER ========== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Jesucristo Fuente de Vida</h3>
+                    <p>
+                        Una iglesia comprometida con predicar el evangelio de Jesucristo 
+                        a todas las generaciones.
+                    </p>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/jesucristofuentedevidahuaral" target="_blank" aria-label="Facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="https://instagram.com" target="_blank" aria-label="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://tiktok.com" target="_blank" aria-label="TikTok">
+                            <i class="fab fa-tiktok"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Enlaces Rápidos</h3>
+                    <ul>
+                        <li><a href="pages/nosotros.html">Quiénes Somos</a></li>
+                        <li><a href="pages/ministerios.html">Ministerios</a></li>
+                        <li><a href="#anexos">Anexos</a></li>
+                        <li><a href="pages/blog.html">Blog</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Recursos</h3>
+                    <ul>
+                        <li><a href="pages/nuevos.html">Soy Nuevo</a></li>
+                        <li><a href="pages/donaciones.html">Donaciones</a></li>
+                        <li><a href="pages/galeria.html">Galería</a></li>
+                        <li><a href="pages/contacto.html">Contacto</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Contacto</h3>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt"></i> Av. Lima 185, Huaral 15202, Lima, Perú</li>
+                        <li><i class="fas fa-phone"></i> +51 981 419 472</li>
+                        <li><i class="fas fa-envelope"></i> contacto@jfvtg.org</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2026 Jesucristo Fuente de Vida para Todas las Generaciones. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ========== BOTÓN FLOTANTE WHATSAPP ========== -->
+    <a href="https://wa.me/51981419472" class="whatsapp-float" target="_blank" aria-label="WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+    <!-- ========== JAVASCRIPT FILES ========== -->
+    <script src="js/main.js"></script>
+    <script src="js/animations.js"></script>
+    
+</body>
+</html>

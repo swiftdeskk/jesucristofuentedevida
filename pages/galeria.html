@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Galería de fotos y videos de eventos, cultos y actividades de la Iglesia Jesucristo Fuente de Vida para Todas las Generaciones.">
+    <meta name="keywords" content="galería, fotos, videos, eventos, cultos, actividades, iglesia">
+    <meta name="author" content="Iglesia Jesucristo Fuente de Vida">
+    
+    <title>Galería | Jesucristo Fuente de Vida para Todas las Generaciones</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="../images/favicon.png">
+    <link rel="shortcut icon" type="image/png" href="../images/favicon.png">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+    <link rel="stylesheet" href="../css/animations.css">
+</head>
+<body>
+
+    <!-- ========== NAVEGACIÓN ========== -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="logo-container">
+                <a href="../index.html">
+                    <img src="../images/logo.png" alt="Logo Iglesia Jesucristo Fuente de Vida" class="logo-img">
+                </a>
+                <div class="logo-text">
+                    <span class="logo-main">Jesucristo Fuente de Vida</span>
+                    <span class="logo-sub">Para Todas las Generaciones</span>
+                </div>
+            </div>
+            
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="../index.html" class="nav-link">Inicio</a></li>
+                <li><a href="nosotros.html" class="nav-link">Quiénes Somos</a></li>
+                <li><a href="nuevos.html" class="nav-link">Soy Nuevo</a></li>
+                <li><a href="ministerios.html" class="nav-link">Ministerios</a></li>
+                <li><a href="blog.html" class="nav-link">Blog</a></li>
+                <li><a href="donaciones.html" class="nav-link">Donaciones</a></li>
+                <li><a href="contacto.html" class="nav-link">Contacto</a></li>
+            </ul>
+            
+            <button class="mobile-toggle" id="mobileToggle" aria-label="Abrir menú">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- ========== HERO INTERNO ========== -->
+    <section class="page-hero">
+        <div class="page-hero-overlay"></div>
+        <div class="container">
+            <div class="page-hero-content">
+                <h1 class="page-hero-title fade-in">Galería de Momentos</h1>
+                <p class="page-hero-subtitle fade-in-delay">
+                    Revive los momentos especiales que Dios nos ha regalado
+                </p>
+                <div class="breadcrumb fade-in-delay-2">
+                    <a href="../index.html"><i class="fas fa-home"></i> Inicio</a>
+                    <i class="fas fa-chevron-right"></i>
+                    <span>Galería</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== FILTROS DE GALERÍA ========== -->
+    <section class="gallery-filters-section">
+        <div class="container">
+            <div class="gallery-filters">
+                <button class="gallery-filter-btn active" data-filter="all">
+                    <i class="fas fa-th"></i> Todas
+                </button>
+                <button class="gallery-filter-btn" data-filter="cultos">
+                    <i class="fas fa-church"></i> Cultos
+                </button>
+                <button class="gallery-filter-btn" data-filter="eventos">
+                    <i class="fas fa-calendar-alt"></i> Eventos
+                </button>
+                <button class="gallery-filter-btn" data-filter="jovenes">
+                    <i class="fas fa-users"></i> Jóvenes
+                </button>
+                <button class="gallery-filter-btn" data-filter="ninos">
+                    <i class="fas fa-child"></i> Niños
+                </button>
+                <button class="gallery-filter-btn" data-filter="retiros">
+                    <i class="fas fa-mountain"></i> Retiros
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== GALERÍA DE FOTOS ========== -->
+    <section class="section gallery-section">
+        <div class="container">
+            <div class="gallery-grid" id="galleryGrid">
+                <!-- Foto 1 -->
+                <div class="gallery-item" data-category="cultos">
+                    <div class="gallery-image">
+                        <img src="../images/galeria/culto-1.jpg" alt="Culto Dominical" onerror="this.src='https://via.placeholder.com/400x300/4A90E2/FFFFFF?text=Culto'">
+                        <div class="gallery-overlay">
+                            <h3>Culto Dominical</h3>
+                            <p>Domingo 15 Ene 2026</p>
+                            <button class="gallery-view-btn" data-image="../images/galeria/culto-1.jpg">
+                                <i class="fas fa-search-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Foto 2 -->
+                <div class="gallery-item" data-category="eventos">
+                    <div class="gallery-image">
+                        <img src="../images/galeria/conferencia-1.jpg" alt="Conferencia" onerror="this.src='https://via.placeholder.com/400x300/7B68EE/FFFFFF?text=Conferencia'">
+                        <div class="gallery-overlay">
+                            <h3>Conferencia de Avivamiento</h3>
+                            <p>Enero 2026</p>
+                            <button class="gallery-view-btn" data-image="../images/galeria/conferencia-1.jpg">
+                                <i class="fas fa-search-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Foto 3 -->
+                <div class="gallery-item" data-category="jovenes">
+                    <div class="gallery-image">
+                        <img src="../images/galeria/jovenes-1.jpg" alt="Reunión de Jóvenes" onerror="this.src='https://via.placeholder.com/400x300/DAA520/FFFFFF?text=Jóvenes'">
+                        <div class="gallery-overlay">
+                            <h3>Noche de Jóvenes</h3>
+                            <p>Sábado de Adoración</p>
+                            <button class="gallery-view-btn" data-image="../images/galeria/jovenes-1.jpg">
+                                <i class="fas fa-search-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Foto 4 -->
+                <div class="gallery-item" data-category="ninos">
+                    <div class="gallery-image">
+                        <img src="../images/galeria/ninos-1.jpg" alt="Escuelita Bíblica" onerror="this.src='https://via.placeholder.com/400x300/27AE60/FFFFFF?text=Niños'">
+                        <div class="gallery-overlay">
+                            <h3>Escuelita Bíblica</h3>
+                            <p>Enseñanza con Amor</p>
+                            <button class="gallery-view-btn" data-image="../images/galeria/ninos-1.jpg">
+                                <i class="fas fa-search-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Foto 5 -->
+                <div class="gallery-item" data-category="retiros">
+                    <div class="gallery-image">
+                        <img src="../images/galeria/retiro-1.jpg" alt="Retiro" onerror="this.src='https://via.placeholder.com/400x300/E74C3C/FFFFFF?text=Retiro'">
+                        <div class="gallery-overlay">
+                            <h3>Retiro Espiritual</h3>
+                            <p>Encuentro con Dios</p>
+                            <button class="gallery-view-btn" data-image="../images/galeria/retiro-1.jpg">
+                                <i class="fas fa-search-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Foto 6 -->
+                <div class="gallery-item" data-category="jovenes">
+                    <div class="gallery-image">
+                        <img src="../images/galeria/ayuda-social.jpg" alt="Ayuda Social" onerror="this.src='https://via.placeholder.com/400x300/9B59B6/FFFFFF?text=Alabanza'">
+                        <div class="gallery-overlay">
+                            <h3>Ayuda Social</h3>
+                            <p>Sirviendo a la comunidad</p>
+                            <button class="gallery-view-btn" data-image="../images/galeria/ayuda-social.jpg">
+                                <i class="fas fa-search-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Foto 7 -->
+                <div class="gallery-item" data-category="jovenes">
+                    <div class="gallery-image">
+                        <img src="../images/galeria/jovenes-2.jpg" alt="Retiro de Jóvenes" onerror="this.src='https://via.placeholder.com/400x300/F39C12/FFFFFF?text=Retiro+Jóvenes'">
+                        <div class="gallery-overlay">
+                            <h3>Retiro de Jóvenes</h3>
+                            <p>Fin de Semana con Dios</p>
+                            <button class="gallery-view-btn" data-image="../images/galeria/jovenes-2.jpg">
+                                <i class="fas fa-search-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Foto 8 -->
+                <div class="gallery-item" data-category="ninos">
+                    <div class="gallery-image">
+                        <img src="../images/galeria/ninos-2.jpg" alt="Actividad Niños" onerror="this.src='https://via.placeholder.com/400x300/16A085/FFFFFF?text=Actividad+Niños'">
+                        <div class="gallery-overlay">
+                            <h3>Día de Juegos</h3>
+                            <p>Diversión y Aprendizaje</p>
+                            <button class="gallery-view-btn" data-image="../images/galeria/ninos-2.jpg">
+                                <i class="fas fa-search-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Foto 9 -->
+                <div class="gallery-item" data-category="eventos">
+                    <div class="gallery-image">
+                        <img src="../images/galeria/navidad-1.jpg" alt="Navidad" onerror="this.src='https://via.placeholder.com/400x300/C0392B/FFFFFF?text=Navidad'">
+                        <div class="gallery-overlay">
+                            <h3>Celebración de Navidad</h3>
+                            <p>Compartiendo el Amor de Cristo</p>
+                            <button class="gallery-view-btn" data-image="../images/galeria/navidad-1.jpg">
+                                <i class="fas fa-search-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Foto 10 -->
+                <div class="gallery-item" data-category="retiros">
+                    <div class="gallery-image">
+                        <img src="../images/galeria/retiro-2.jpg" alt="Retiro Familias" onerror="this.src='https://via.placeholder.com/400x300/8E44AD/FFFFFF?text=Retiro+Familias'">
+                        <div class="gallery-overlay">
+                            <h3>Retiro de Familias</h3>
+                            <p>Unidos en Cristo</p>
+                            <button class="gallery-view-btn" data-image="../images/galeria/retiro-2.jpg">
+                                <i class="fas fa-search-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Foto 11 -->
+                <div class="gallery-item" data-category="cultos">
+                    <div class="gallery-image">
+                        <img src="../images/galeria/oracion-1.jpg" alt="Reunión de Oración" onerror="this.src='https://via.placeholder.com/400x300/2C3E50/FFFFFF?text=Oración'">
+                        <div class="gallery-overlay">
+                            <h3>Vigilia de Oración</h3>
+                            <p>Intercediendo por la Nación</p>
+                            <button class="gallery-view-btn" data-image="../images/galeria/oracion-1.jpg">
+                                <i class="fas fa-search-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Foto 12 -->
+                <div class="gallery-item" data-category="eventos">
+                    <div class="gallery-image">
+                        <img src="../images/galeria/ano-nuevo-1.jpg" alt="Año Nuevo" onerror="this.src='https://via.placeholder.com/400x300/1ABC9C/FFFFFF?text=Año+Nuevo'">
+                        <div class="gallery-overlay">
+                            <h3>Culto de Año Nuevo</h3>
+                            <p>Iniciando el año en la presencia de Dios</p>
+                            <button class="gallery-view-btn" data-image="../images/galeria/ano-nuevo-1.jpg">
+                                <i class="fas fa-search-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                </div> <!-- AQUÍ recién se cierra gallery-grid -->
+
+
+            <!-- Botón Cargar Más -->
+            <div class="load-more-container">
+                <button class="btn btn-primary" id="loadMoreBtn">
+                    <i class="fas fa-images"></i> Cargar Más Fotos
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== MODAL DE IMAGEN ========== -->
+    <div class="image-modal" id="imageModal">
+        <div class="modal-close-btn" id="modalClose">
+            <i class="fas fa-times"></i>
+        </div>
+        <div class="modal-prev-btn" id="modalPrev">
+            <i class="fas fa-chevron-left"></i>
+        </div>
+        <div class="modal-next-btn" id="modalNext">
+            <i class="fas fa-chevron-right"></i>
+        </div>
+        <img src="" alt="Imagen ampliada" id="modalImage">
+        <div class="modal-caption" id="modalCaption"></div>
+    </div>
+
+    <!-- ========== LLAMADO A LA ACCIÓN ========== -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2 class="cta-title">¿Quieres Compartir Tus Fotos?</h2>
+                <p class="cta-text">
+                    Si tienes fotos de eventos de la iglesia que te gustaría compartir con nosotros, 
+                    envíanoslas y podrían aparecer en nuestra galería.
+                </p>
+                <div class="cta-buttons">
+                    <a href="contacto.html" class="btn btn-white">
+                        <i class="fas fa-camera"></i> Enviar Fotos
+                    </a>
+                    <a href="blog.html" class="btn btn-outline-white">
+                        <i class="fas fa-newspaper"></i> Ver Blog
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== FOOTER ========== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Jesucristo Fuente de Vida</h3>
+                    <p>
+                        Una iglesia comprometida con predicar el evangelio de Jesucristo 
+                        a todas las generaciones.
+                    </p>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/jesucristofuentedevidahuaral" target="_blank" aria-label="Facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+
+                        <a href="https://instagram.com" target="_blank" aria-label="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://tiktok.com" target="_blank" aria-label="TikTok">
+                            <i class="fab fa-tiktok"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Enlaces Rápidos</h3>
+                    <ul>
+                        <li><a href="nosotros.html">Quiénes Somos</a></li>
+                        <li><a href="ministerios.html">Ministerios</a></li>
+                        <li><a href="../index.html#anexos">Anexos</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Recursos</h3>
+                    <ul>
+                        <li><a href="nuevos.html">Soy Nuevo</a></li>
+                        <li><a href="donaciones.html">Donaciones</a></li>
+                        <li><a href="galeria.html">Galería</a></li>
+                        <li><a href="contacto.html">Contacto</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Contacto</h3>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt"></i> Av. Lima 185, Huaral 15202, Lima, Perú</li>
+                        <li><i class="fas fa-phone"></i> +51 981 419 472</li>
+                        <li><i class="fas fa-envelope"></i> contacto@jfvtg.org</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2026 Jesucristo Fuente de Vida para Todas las Generaciones. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ========== BOTÓN FLOTANTE WHATSAPP ========== -->
+    <a href="https://wa.me/51981419472" class="whatsapp-float" target="_blank" aria-label="WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- ========== JAVASCRIPT FILES ========== -->
+    <script src="../js/main.js"></script>
+    <script src="../js/animations.js"></script>
+    <script src="../js/galeria.js"></script>
+    
+</body>
+</html>
