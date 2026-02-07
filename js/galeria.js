@@ -1,8 +1,3 @@
-/* ========================================
-   JESUCRISTO FUENTE DE VIDA - GALERIA.JS
-   Funcionalidad para la galería de fotos
-======================================== */
-
 let currentImageIndex = 0;
 let images = [];
 
@@ -271,7 +266,6 @@ document.addEventListener('DOMContentLoaded', () => {
     initLoadMore();
     initLazyLoading();
     
-    console.log('✅ Galería inicializada');
 });
 
 // Agregar animaciones CSS

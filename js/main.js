@@ -1,8 +1,3 @@
-/* ========================================
-   JESUCRISTO FUENTE DE VIDA - MAIN.JS
-   JavaScript principal del sitio web
-======================================== */
-
 // ========================================
 // VARIABLES GLOBALES
 // ========================================
@@ -72,17 +67,7 @@ function initStickyNavbar() {
         } else {
             navbar.classList.remove('scrolled');
         }
-        
-        // Ocultar/mostrar navbar al hacer scroll (opcional)
-        // Descomenta si quieres que el navbar se oculte al hacer scroll hacia abajo
-        /*
-        if (currentScroll > lastScroll && currentScroll > 200) {
-            navbar.style.transform = 'translateY(-100%)';
-        } else {
-            navbar.style.transform = 'translateY(0)';
-        }
-        */
-        
+
         lastScroll = currentScroll;
     });
 }
@@ -201,8 +186,6 @@ function initScrollReveal() {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.classList.add('revealed');
-                // Opcional: dejar de observar después de revelar
-                // observer.unobserve(entry.target);
             }
         });
     }, observerOptions);
@@ -349,32 +332,6 @@ function updateFooterYear() {
 }
 
 // ========================================
-// MODO OSCURO (OPCIONAL)
-// ========================================
-function initDarkMode() {
-    const darkModeToggle = document.getElementById('darkModeToggle');
-    
-    if (darkModeToggle) {
-        // Verificar preferencia guardada
-        const darkMode = localStorage.getItem('darkMode');
-        
-        if (darkMode === 'enabled') {
-            document.body.classList.add('dark-mode');
-        }
-        
-        darkModeToggle.addEventListener('click', () => {
-            document.body.classList.toggle('dark-mode');
-            
-            if (document.body.classList.contains('dark-mode')) {
-                localStorage.setItem('darkMode', 'enabled');
-            } else {
-                localStorage.setItem('darkMode', null);
-            }
-        });
-    }
-}
-
-// ========================================
 // DETECCIÓN DE DISPOSITIVO
 // ========================================
 function detectDevice() {
@@ -388,20 +345,6 @@ function detectDevice() {
 }
 
 // ========================================
-// PREVENIR CLIC DERECHO EN IMÁGENES (OPCIONAL)
-// ========================================
-function protectImages() {
-    const images = document.querySelectorAll('img');
-    
-    images.forEach(img => {
-        img.addEventListener('contextmenu', (e) => {
-            e.preventDefault();
-            return false;
-        });
-    });
-}
-
-// ========================================
 // MANEJO DE ERRORES DE IMÁGENES
 // ========================================
 function handleImageErrors() {
@@ -409,27 +352,8 @@ function handleImageErrors() {
     
     images.forEach(img => {
         img.addEventListener('error', function() {
-            this.src = 'images/placeholder.jpg'; // Imagen de respaldo
+            this.src = 'images/placeholder.jpg';
             this.alt = 'Imagen no disponible';
-        });
-    });
-}
-
-// ========================================
-// PERFORMANCE: PRELOAD DE ENLACES
-// ========================================
-function initLinkPreload() {
-    const links = document.querySelectorAll('a[href]');
-    
-    links.forEach(link => {
-        link.addEventListener('mouseenter', () => {
-            const href = link.getAttribute('href');
-            if (href && !href.startsWith('#') && !href.startsWith('mailto:') && !href.startsWith('tel:')) {
-                const preloadLink = document.createElement('link');
-                preloadLink.rel = 'prefetch';
-                preloadLink.href = href;
-                document.head.appendChild(preloadLink);
-            }
         });
     });
 }
@@ -463,15 +387,9 @@ document.addEventListener('DOMContentLoaded', () => {
     detectDevice();
     handleImageErrors();
     
-    // Opcional: descomentar si necesitas
-    // initDarkMode();
-    // protectImages();
-    // initLinkPreload();
-    
     // Mensaje de bienvenida en consola
     showWelcomeMessage();
     
-    console.log('✅ Sitio web cargado correctamente');
 });
 
 // ========================================
@@ -481,7 +399,6 @@ window.addEventListener('load', () => {
     // Remover clase de carga si existe
     document.body.classList.remove('loading');
     
-    console.log('✅ Todos los recursos cargados');
 });
 
 // ========================================
@@ -501,3 +418,72 @@ if (typeof module !== 'undefined' && module.exports) {
         initScrollReveal
     };
 }
+
+<!-- Botón para probar -->
+<button onclick="mostrarNotificacion()">Copiar Datos</button>
+
+<!-- Modal -->
+<div id="miModal" class="modal">
+  <div class="modal-contenido">
+    <span class="cerrar" onclick="cerrarNotificacion()">&times;</span>
+    <p>Datos bancarios copiados al portapapeles ✅</p>
+  </div>
+</div>
+
+<style>
+/* Fondo del modal */
+.modal {
+  display: none; /* oculto por defecto */
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.5); /* transparente negro */
+}
+
+/* Contenido del modal */
+.modal-contenido {
+  background-color: #fff;
+  margin: 15% auto; /* centrado vertical y horizontal */
+  padding: 20px;
+  border-radius: 12px;
+  width: 300px;
+  text-align: center;
+  font-family: sans-serif;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+/* Botón cerrar */
+.cerrar {
+  color: #aaa;
+  float: right;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.cerrar:hover {
+  color: black;
+}
+</style>
+
+<script>
+function mostrarNotificacion() {
+    // Aquí pondrías la función de copiar datos
+    document.getElementById('miModal').style.display = 'block';
+}
+
+function cerrarNotificacion() {
+    document.getElementById('miModal').style.display = 'none';
+}
+
+// Cerrar al hacer clic fuera del modal
+window.onclick = function(event) {
+  let modal = document.getElementById('miModal');
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+</script>

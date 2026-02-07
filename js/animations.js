@@ -1,8 +1,3 @@
-/* ========================================
-   JESUCRISTO FUENTE DE VIDA - ANIMATIONS.JS
-   Animaciones y efectos interactivos
-======================================== */
-
 // ========================================
 // EFECTO PARALLAX EN HERO
 // ========================================
@@ -227,29 +222,6 @@ function init3DCardEffect() {
 }
 
 // ========================================
-// PARTÍCULAS FLOTANTES EN HERO
-// ========================================
-function initFloatingParticles() {
-    const hero = document.querySelector('.hero');
-    
-    if (hero && window.innerWidth > 768) {
-        const particlesContainer = document.createElement('div');
-        particlesContainer.className = 'floating-particles';
-        hero.appendChild(particlesContainer);
-        
-        // Crear partículas
-        for (let i = 0; i < 30; i++) {
-            const particle = document.createElement('div');
-            particle.className = 'particle';
-            particle.style.left = Math.random() * 100 + '%';
-            particle.style.animationDelay = Math.random() * 10 + 's';
-            particle.style.animationDuration = (Math.random() * 10 + 10) + 's';
-            particlesContainer.appendChild(particle);
-        }
-    }
-}
-
-// ========================================
 // ZOOM EN IMÁGENES AL HACER HOVER
 // ========================================
 function initImageZoom() {
@@ -268,22 +240,6 @@ function initImageZoom() {
         });
         
         img.style.transition = 'transform 0.5s ease';
-    });
-}
-
-// ========================================
-// EFECTO DE BLUR AL HACER SCROLL
-// ========================================
-function initScrollBlur() {
-    const blurElements = document.querySelectorAll('[data-scroll-blur]');
-    
-    window.addEventListener('scroll', () => {
-        const scrolled = window.pageYOffset;
-        
-        blurElements.forEach(element => {
-            const blurAmount = Math.min(scrolled / 100, 5);
-            element.style.filter = `blur(${blurAmount}px)`;
-        });
     });
 }
 
@@ -354,79 +310,6 @@ function initIconAnimations() {
             });
         }
     });
-}
-
-// ========================================
-// CAMBIO DE COLOR GRADUAL EN SCROLL
-// ========================================
-function initColorTransition() {
-    const colorElements = document.querySelectorAll('[data-color-transition]');
-    
-    window.addEventListener('scroll', () => {
-        const scrollPercent = (window.pageYOffset / (document.body.scrollHeight - window.innerHeight)) * 100;
-        
-        colorElements.forEach(element => {
-            const hue = (scrollPercent * 3.6).toFixed(0);
-            element.style.filter = `hue-rotate(${hue}deg)`;
-        });
-    });
-}
-
-// ========================================
-// CURSOR PERSONALIZADO (OPCIONAL)
-// ========================================
-function initCustomCursor() {
-    if (window.innerWidth > 1024) {
-        const cursor = document.createElement('div');
-        cursor.className = 'custom-cursor';
-        document.body.appendChild(cursor);
-        
-        const cursorFollower = document.createElement('div');
-        cursorFollower.className = 'custom-cursor-follower';
-        document.body.appendChild(cursorFollower);
-        
-        let mouseX = 0;
-        let mouseY = 0;
-        let followerX = 0;
-        let followerY = 0;
-        
-        document.addEventListener('mousemove', (e) => {
-            mouseX = e.clientX;
-            mouseY = e.clientY;
-            
-            cursor.style.left = mouseX + 'px';
-            cursor.style.top = mouseY + 'px';
-        });
-        
-        function animateFollower() {
-            const distX = mouseX - followerX;
-            const distY = mouseY - followerY;
-            
-            followerX += distX * 0.1;
-            followerY += distY * 0.1;
-            
-            cursorFollower.style.left = followerX + 'px';
-            cursorFollower.style.top = followerY + 'px';
-            
-            requestAnimationFrame(animateFollower);
-        }
-        
-        animateFollower();
-        
-        // Expandir cursor en elementos clicables
-        const clickables = document.querySelectorAll('a, button, .btn');
-        clickables.forEach(el => {
-            el.addEventListener('mouseenter', () => {
-                cursor.style.transform = 'scale(2)';
-                cursorFollower.style.transform = 'scale(1.5)';
-            });
-            
-            el.addEventListener('mouseleave', () => {
-                cursor.style.transform = 'scale(1)';
-                cursorFollower.style.transform = 'scale(1)';
-            });
-        });
-    }
 }
 
 // ========================================
@@ -501,21 +384,10 @@ document.addEventListener('DOMContentLoaded', () => {
     initWaveEffect();
     initTextReveal();
     initStatsCounter();
-    
-    // Efectos opcionales (descomentar si se necesitan)
-    // initFloatingParticles();
-    // initScrollBlur();
-    // initColorTransition();
-    // initCustomCursor();
-    
-    console.log('✅ Animaciones inicializadas');
+
 });
 
-// ========================================
-// PERFORMANCE: DESACTIVAR ANIMACIONES SI ES NECESARIO
-// ========================================
 if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
     // Desactivar todas las animaciones
     document.documentElement.style.setProperty('--transition-duration', '0s');
-    console.log('⚠️ Animaciones reducidas por preferencia del usuario');
 }

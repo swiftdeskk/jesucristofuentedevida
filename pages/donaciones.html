@@ -23,6 +23,35 @@
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/responsive.css">
     <link rel="stylesheet" href="../css/animations.css">
+    
+    <!-- Estilos de notificación -->
+    <style>
+    .notificacion {
+        position: fixed;
+        top: 80px;
+        right: 20px;
+        background: #7B68EE;
+        color: #fff;
+        padding: 15px 20px;
+        border-radius: 10px;
+        font-family: sans-serif;
+        font-weight: 500;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.4s ease, transform 0.4s ease;
+        transform: translateY(-20px);
+        z-index: 1000;
+    }
+    .notificacion.show {
+        opacity: 1;
+        pointer-events: auto;
+        transform: translateY(0);
+    }
+    .notificacion p {
+        margin: 0;
+    }
+    </style>
 </head>
 <body>
 
@@ -78,7 +107,7 @@
         <div class="container">
             <div class="why-donate-content">
                 <div class="why-donate-text">
-                    <h2>¿Por Qué Donar?</h2>
+                    <h2>¿Por qué Donar?</h2>
                     <p>
                         La Biblia nos enseña sobre la bendición de dar. Cuando ofrendamos, no solo sostenemos 
                         la obra de Dios, sino que también participamos activamente en la extensión del evangelio 
@@ -160,22 +189,36 @@
                     <div class="method-icon">
                         <i class="fas fa-university"></i>
                     </div>
+
                     <h3>Transferencia Bancaria</h3>
                     <p>Realiza tu donación directamente a nuestra cuenta bancaria</p>
+
                     <div class="bank-details">
                         <div class="bank-detail-item">
                             <strong>Banco:</strong> BCP
                         </div>
+
                         <div class="bank-detail-item">
-                            <strong>Cuenta Corriente:</strong> 123-456789-0-12
+                            <strong>Tipo de Cuenta:</strong> Cuenta Digital
                         </div>
+
                         <div class="bank-detail-item">
-                            <strong>CCI:</strong> 002-123-456789012345-67
+                            <strong>Moneda:</strong> Soles
                         </div>
+
                         <div class="bank-detail-item">
-                            <strong>Titular:</strong> Iglesia Jesucristo Fuente de Vida
+                            <strong>Número de Cuenta:</strong> 37036990996093
+                        </div>
+
+                        <div class="bank-detail-item">
+                            <strong>CCI:</strong> 00237013699099609350
+                        </div>
+
+                        <div class="bank-detail-item">
+                            <strong>Titular:</strong> NICOLAS MONTAÑO MONROY
                         </div>
                     </div>
+
                     <button class="btn copy-data" onclick="copyBankDetails()">
                         <i class="fas fa-copy"></i> Copiar Datos
                     </button>
@@ -207,14 +250,18 @@
                             <i class="fas fa-church"></i>
                             <div>
                                 <strong>Durante el Culto</strong>
-                                <p>Domingos 10:00 AM y 8:00 PM</p>
+                                <p>Domingos 10:00 AM y 8:00&nbsp;PM</p>
                             </div>
                         </div>
                         <div class="cash-option">
                             <i class="fas fa-building"></i>
                             <div>
                                 <strong>En Oficina</strong>
-                                <p>Lun - Vie: 9:00 AM - 5:00 PM</p>
+                                <p>
+                                    Martes a Domingo de:<br>
+                                    9:00&nbsp;AM a 1:00&nbsp;PM<br>
+                                    3:00&nbsp;PM a 10:00&nbsp;PM
+                                </p>
                             </div>
                         </div>
                     </div>
@@ -378,8 +425,8 @@
                     <h3>Contacto</h3>
                     <ul>
                         <li><i class="fas fa-map-marker-alt"></i> Av. Lima 185, Huaral 15202, Lima, Perú</li>
-                        <li><i class="fas fa-phone"></i> +51 981 419 472</li>
-                        <li><i class="fas fa-envelope"></i> contacto@jfvtg.org</li>
+                        <li><a href="tel:+51981419472"><i class="fas fa-phone"></i> +51 981 419 472</a>
+                        <li><i class="fas fa-envelope"></i><a href="mailto:contacto@jfvtg.org">contacto@jfvtg.org</a></li>
                     </ul>
                 </div>
             </div>
@@ -395,31 +442,46 @@
         <i class="fab fa-whatsapp"></i>
     </a>
 
+    <!-- ========== NOTIFICACIÓN ========== -->
+    <div id="notificacion" class="notificacion">
+        <p>Datos bancarios copiados al portapapeles</p>
+    </div>
+
     <!-- ========== JAVASCRIPT FILES ========== -->
     <script src="../js/main.js"></script>
     <script src="../js/animations.js"></script>
     <script src="../js/nuevos.js"></script>
     <script>
-        // Copiar datos bancarios
-        function copyBankDetails() {
-            const text = `Banco: BCP
-Cuenta Corriente: 123-456789-0-12
-CCI: 002-123-456789012345-67
-Titular: Iglesia Jesucristo Fuente de Vida`;
-            
-            navigator.clipboard.writeText(text).then(() => {
-                alert('Datos bancarios copiados al portapapeles');
-            });
-        }
-        
-        // Scroll a métodos de donación
-        function scrollToMethods() {
-            document.querySelector('.donation-methods-section').scrollIntoView({
-                behavior: 'smooth',
-                block: 'start'
-            });
-        }
+    function copyBankDetails() {
+        const text = `Banco: BCP
+Tipo de Cuenta: Cuenta Digital
+Moneda: Soles
+Número de Cuenta: 37036990996093
+CCI: 00237013699099609350
+Titular: NICOLAS MONTAÑO MONROY`;
+
+        navigator.clipboard.writeText(text).then(() => {
+            mostrarNotificacion();
+        });
+    }
+
+    function mostrarNotificacion() {
+        const notif = document.getElementById('notificacion');
+        notif.classList.add('show');
+        setTimeout(() => {
+            notif.classList.remove('show');
+        }, 2500); // desaparece después de 2.5 segundos
+    }
+
+    // Scroll a métodos de donación
+    function scrollToMethods() {
+        document.querySelector('.donation-methods-section').scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+        });
+    }
     </script>
+
     
 </body>
 </html>

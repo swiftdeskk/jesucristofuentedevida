@@ -1,8 +1,3 @@
-/* ========================================
-   JESUCRISTO FUENTE DE VIDA - NUEVOS.JS
-   Funcionalidad para la página de nuevos visitantes
-======================================== */
-
 // ========================================
 // ACORDEÓN DE FAQS
 // ========================================
@@ -515,5 +510,4 @@ document.addEventListener('DOMContentLoaded', () => {
     initCourseRegistration();
     initMinistryButtons();
     
-    console.log('✅ Página de nuevos inicializada');
 });

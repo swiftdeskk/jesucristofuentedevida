@@ -1,8 +1,3 @@
-/* ========================================
-   JESUCRISTO FUENTE DE VIDA - FORMS.JS
-   Manejo y validación de formularios
-======================================== */
-
 // ========================================
 // CONFIGURACIÓN GENERAL
 // ========================================
@@ -82,7 +77,7 @@ const ErrorMessages = {
 };
 
 // ========================================
-// FORMATEADOR DE TELÉFONO PERUANO
+// FORMATEADOR DE TELÉFONO
 // ========================================
 class PhoneFormatter {
     constructor(input) {
@@ -785,7 +780,7 @@ function addAnimationStyles() {
 // ========================================
 document.addEventListener('DOMContentLoaded', () => {
     addAnimationStyles();
-    initPhoneFormatters(); // 👈 NUEVO - Formateo automático de teléfonos
+    initPhoneFormatters();
     initContactForm();
     initNewsletterForm();
     initAllForms();
@@ -793,7 +788,6 @@ document.addEventListener('DOMContentLoaded', () => {
     initAutoResizeTextarea();
     preventDoubleSubmit();
     
-    console.log('✅ Formularios inicializados con formateo de teléfono');
 });
 
 // ========================================

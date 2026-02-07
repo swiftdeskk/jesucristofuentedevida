@@ -1,8 +1,3 @@
-/* ========================================
-   JESUCRISTO FUENTE DE VIDA - BLOG.JS
-   Funcionalidad para el blog
-======================================== */
-
 // ========================================
 // FILTRADO DE CATEGORÍAS
 // ========================================
@@ -172,7 +167,6 @@ document.addEventListener('DOMContentLoaded', () => {
     initPagination();
     initNewsletterSubscription();
     
-    console.log('✅ Blog inicializado');
 });
 
 // Agregar animación CSS si no existe

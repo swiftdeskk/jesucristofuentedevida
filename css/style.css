@@ -1,9 +1,4 @@
 /* ========================================
-   JESUCRISTO FUENTE DE VIDA - STYLE.CSS
-   Estilos principales del sitio web
-======================================== */
-
-/* ========================================
    VARIABLES CSS
 ======================================== */
 :root {
@@ -252,7 +247,7 @@ button {
 }
 
 /* ========================================
-   HERO SECTION
+   HERO SECTION - VERSIÓN PROFESIONAL SIN AZUL
 ======================================== */
 .hero {
     position: relative;
@@ -260,7 +255,11 @@ button {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(135deg, rgba(74, 144, 226, 0.93), rgba(123, 104, 238, 0.93));
+    background-image: url('../images/hero-iglesia.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed; /* Efecto parallax */
     color: var(--white);
     text-align: center;
     padding: var(--spacing-xl) var(--spacing-md);
@@ -273,7 +272,8 @@ button {
     left: 0;
     width: 100%;
     height: 100%;
-    background: radial-gradient(circle at 30% 50%, rgba(218, 165, 32, 0.1) 0%, transparent 60%);
+    /* Overlay oscuro elegante - SIN AZUL */
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(44, 62, 80, 0.8));
     z-index: 1;
 }
 
@@ -289,7 +289,8 @@ button {
     font-weight: 800;
     line-height: 1.2;
     margin-bottom: 1.5rem;
-    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+    /* Sombra fuerte para máxima legibilidad */
+    text-shadow: 3px 3px 15px rgba(0, 0, 0, 0.8), 0 0 30px rgba(0, 0, 0, 0.5);
 }
 
 .hero-verse {
@@ -301,17 +302,23 @@ button {
     font-style: italic;
     font-weight: 300;
     margin-bottom: 0.5rem;
+    /* Sombra para legibilidad */
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7), 0 0 20px rgba(0, 0, 0, 0.4);
 }
 
 .verse-ref {
     font-size: 1rem;
-    opacity: 0.9;
+    opacity: 0.95;
+    /* Sombra para legibilidad */
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
 }
 
 .hero-description {
     font-size: 1.2rem;
     margin-bottom: 2.5rem;
-    opacity: 0.95;
+    opacity: 0.98;
+    /* Sombra para legibilidad */
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
 }
 
 .hero-buttons {
@@ -319,6 +326,70 @@ button {
     gap: 1rem;
     justify-content: center;
     flex-wrap: wrap;
+}
+
+/* Indicador de scroll */
+.scroll-indicator {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+    animation: bounce 2s infinite;
+}
+
+.scroll-indicator i {
+    font-size: 2rem;
+    color: var(--white);
+    opacity: 0.9;
+    filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.5));
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateX(-50%) translateY(0);
+    }
+    40% {
+        transform: translateX(-50%) translateY(-10px);
+    }
+    60% {
+        transform: translateX(-50%) translateY(-5px);
+    }
+}
+
+/* Responsive para móviles */
+@media (max-width: 768px) {
+    .hero {
+        min-height: 70vh;
+        background-attachment: scroll; /* Mejor rendimiento en móviles */
+    }
+    
+    .hero-overlay {
+        /* Un poco más oscuro en móviles para mejor legibilidad */
+        background: rgba(0, 0, 0, 0.75);
+    }
+    
+    .hero-title {
+        font-size: 2.5rem;
+    }
+    
+    .verse-text {
+        font-size: 1.1rem;
+    }
+    
+    .hero-description {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero {
+        min-height: 60vh;
+    }
+    
+    .hero-title {
+        font-size: 2rem;
+    }
 }
 
 /* Indicador de scroll */
@@ -927,14 +998,19 @@ button {
    PÁGINAS INTERNAS - HERO
 ======================================== */
 .page-hero {
-    background: linear-gradient(135deg, rgba(74, 144, 226, 0.95), rgba(123, 104, 238, 0.95));
-    color: var(--white);
-    padding: 8rem 2rem 4rem;
-    text-align: center;
     position: relative;
     min-height: 40vh;
     display: flex;
     align-items: center;
+    /* IMAGEN DE FONDO - igual que en inicio */
+    background-image: url('../images/hero-iglesia.jpg');
+    background-size: cover;
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: var(--white);
+    padding: 8rem 2rem 4rem;
+    text-align: center;
 }
 
 .page-hero-overlay {
@@ -943,7 +1019,9 @@ button {
     left: 0;
     width: 100%;
     height: 100%;
-    background: radial-gradient(circle at 30% 50%, rgba(218, 165, 32, 0.1) 0%, transparent 60%);
+    /* Overlay oscuro para legibilidad */
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(44, 62, 80, 0.8));
+    z-index: 1;
 }
 
 .page-hero-content {
@@ -955,13 +1033,14 @@ button {
     font-size: 3rem;
     font-weight: 800;
     margin-bottom: 1rem;
-    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+    text-shadow: 3px 3px 15px rgba(0, 0, 0, 0.8);
 }
 
 .page-hero-subtitle {
     font-size: 1.2rem;
     opacity: 0.95;
     margin-bottom: 2rem;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
 }
 
 .breadcrumb {
@@ -985,6 +1064,27 @@ button {
 
 .breadcrumb i {
     font-size: 0.8rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .page-hero {
+        min-height: 30vh;
+        padding: 6rem 1.5rem 3rem;
+        background-attachment: scroll;
+    }
+    
+    .page-hero-overlay {
+        background: rgba(0, 0, 0, 0.8);
+    }
+    
+    .page-hero-title {
+        font-size: 2rem;
+    }
+    
+    .page-hero-subtitle {
+        font-size: 1rem;
+    }
 }
 
 /* ========================================
@@ -1916,29 +2016,35 @@ button {
 
 .featured-post-section {
     background: var(--light);
+    padding: 3rem 0;
 }
 
 .featured-post {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 3rem;
-    align-items: center;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 0;
+    align-items: stretch;
     background: var(--white);
     border-radius: var(--radius-lg);
     overflow: hidden;
     box-shadow: var(--shadow-md);
+    min-height: 450px;
+    max-height: 500px;
 }
 
 .featured-post-image {
     position: relative;
     height: 100%;
-    min-height: 400px;
+    min-height: 450px;
+    max-height: 500px;
+    overflow: hidden;
 }
 
 .featured-post-image img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    object-position: center;
 }
 
 .featured-badge {
@@ -1950,13 +2056,18 @@ button {
     padding: 0.5rem 1.2rem;
     border-radius: var(--radius-full);
     font-weight: 600;
+    font-size: 0.9rem;
     display: flex;
     align-items: center;
     gap: 0.5rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
 .featured-post-content {
-    padding: 3rem;
+    padding: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .post-category {
@@ -1970,20 +2081,22 @@ button {
     font-size: 0.85rem;
     font-weight: 600;
     margin-bottom: 1rem;
+    width: fit-content;
 }
 
 .featured-post-title {
-    font-size: 2.2rem;
+    font-size: 1.8rem;
     color: var(--dark);
     margin-bottom: 1rem;
     font-weight: 700;
+    line-height: 1.3;
 }
 
 .post-meta {
     display: flex;
     gap: 1.5rem;
-    margin-bottom: 1.5rem;
-    font-size: 0.9rem;
+    margin-bottom: 1rem;
+    font-size: 0.85rem;
     color: var(--text-light);
     flex-wrap: wrap;
 }
@@ -1995,10 +2108,10 @@ button {
 }
 
 .featured-post-excerpt {
-    font-size: 1rem;
+    font-size: 0.95rem;
     color: var(--text-secondary);
-    line-height: 1.8;
-    margin-bottom: 2rem;
+    line-height: 1.7;
+    margin-bottom: 0;
 }
 
 .blog-posts-section {
@@ -2937,12 +3050,6 @@ button {
     background: var(--light);
 }
 
-/* ========================================
-   MEJORA PARA BOTÓN "COPIAR DATOS" EN DONACIONES
-   Añade estos estilos a tu style.css
-======================================== */
-
-/* Estilo mejorado para el botón outline en donaciones */
 .donation-method-card .btn-outline {
     background: var(--white);
     color: var(--primary);
@@ -2963,7 +3070,6 @@ button {
     font-size: 1.1rem;
 }
 
-/* Alternativamente, puedes crear una clase específica */
 .btn-copy-data {
     background: var(--primary);
     color: var(--white);
@@ -2991,7 +3097,6 @@ button {
     font-size: 1.1rem;
 }
 
-/* Versión alternativa con acento dorado */
 .btn-copy-accent {
     background: var(--accent);
     color: var(--white);
@@ -3019,7 +3124,6 @@ button {
     font-size: 1.1rem;
 }
 
-/* Responsive */
 @media (max-width: 768px) {
     .donation-method-card .btn-outline,
     .btn-copy-data,
@@ -3160,16 +3264,10 @@ button {
     color: var(--primary-dark);
 }
 
-/* ========================================
-   AJUSTES PARA EQUIPO PASTORAL
-   Agrega estos estilos al final de tu style.css
-======================================== */
-
-/* Limitar altura de las fotos del equipo */
 .team-photo {
     position: relative;
     overflow: hidden;
-    height: 500px; /* Altura más larga para escritorio */
+    height: 500px;
     width: 100%;
 }
 
@@ -3177,11 +3275,10 @@ button {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: center 20%; /* Enfocar un poco hacia arriba para centrar mejor el rostro */
+    object-position: center 20%;
     transition: transform var(--transition-normal);
 }
 
-/* Ajustes responsive para móvil */
 @media (max-width: 768px) {
     .team-photo {
         height: 400px;
@@ -3229,4 +3326,33 @@ button {
     50% {
         transform: scale(1.05);
     }
+}
+
+/* ===== EFECTIVO - ALINEACIÓN ===== */
+
+.cash-info {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.cash-option {
+    display: flex;
+    align-items: center;   /* centra verticalmente icono + texto */
+    gap: 15px;
+}
+
+.cash-option i {
+    font-size: 28px;
+    width: 40px;          /* ancho fijo para que todos alineen igual */
+    text-align: center;
+}
+
+.cash-option strong {
+    display: block;
+    margin-bottom: 4px;
+}
+
+.cash-option p {
+    margin: 0;
 }

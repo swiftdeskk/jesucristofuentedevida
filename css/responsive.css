@@ -1,9 +1,4 @@
 /* ========================================
-   JESUCRISTO FUENTE DE VIDA - RESPONSIVE.CSS
-   Estilos responsive para móvil y tablet
-======================================== */
-
-/* ========================================
    BREAKPOINTS
    - Mobile Small: 320px - 480px
    - Mobile: 481px - 768px
@@ -81,6 +76,7 @@
 /* ========================================
    TABLETS Y MÓVILES (max-width: 992px)
 ======================================== */
+
 @media (max-width: 992px) {
     /* Contacto en una columna */
     .contact-grid {
@@ -635,6 +631,7 @@
 /* ========================================
    MÓVILES PEQUEÑOS (max-width: 480px)
 ======================================== */
+
 @media (max-width: 480px) {
     /* Tipografía */
     html {
@@ -915,6 +912,7 @@
 /* ========================================
    MÓVILES MUY PEQUEÑOS (max-width: 360px)
 ======================================== */
+
 @media (max-width: 360px) {
     /* Ajustes finos para pantallas muy pequeñas */
     .container {
@@ -1007,21 +1005,6 @@
 }
 
 /* ========================================
-   MODO OSCURO (OPCIONAL)
-======================================== */
-@media (prefers-color-scheme: dark) {
-    /* Descomenta estas líneas si quieres soporte para modo oscuro */
-    /*
-    :root {
-        --white: #1a1a1a;
-        --light: #2d2d2d;
-        --text-primary: #e0e0e0;
-        --text-secondary: #b0b0b0;
-    }
-    */
-}
-
-/* ========================================
    TOUCH DEVICES
 ======================================== */
 @media (hover: none) and (pointer: coarse) {
@@ -1101,12 +1084,6 @@
     }
 
 }
-
-
-/* ========================================
-   AJUSTES RESPONSIVE - SECCIÓN "CÓMO LLEGAR"
-   Agregar al final de responsive.css
-======================================== */
 
 /* ========================================
    SECCIÓN DE UBICACIÓN - MÓVILES
@@ -1235,120 +1212,6 @@
         display: inline-block;
     }
 }
-
-/* ========================================
-   CORRECCIONES PARA BLOG - DESKTOP Y MÓVIL
-   Agrega esto al final de tu style.css y responsive.css
-======================================== */
-
-/* ========================================
-   DESKTOP - Agregar a style.css
-======================================== */
-
-/* Artículo destacado mejorado */
-.featured-post-section {
-    background: var(--light);
-    padding: 3rem 0; /* Reducir padding vertical */
-}
-
-.featured-post {
-    display: grid;
-    grid-template-columns: 1.2fr 1fr; /* Más espacio para la imagen */
-    gap: 0;
-    align-items: stretch;
-    background: var(--white);
-    border-radius: var(--radius-lg);
-    overflow: hidden;
-    box-shadow: var(--shadow-md);
-    min-height: 450px;
-    max-height: 500px;
-}
-
-.featured-post-image {
-    position: relative;
-    height: 100%;
-    min-height: 450px;
-    max-height: 500px;
-    overflow: hidden;
-}
-
-.featured-post-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
-}
-
-.featured-badge {
-    position: absolute;
-    top: 20px;
-    left: 20px;
-    background: var(--accent);
-    color: var(--white);
-    padding: 0.5rem 1.2rem;
-    border-radius: var(--radius-full);
-    font-weight: 600;
-    font-size: 0.9rem;
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-}
-
-.featured-post-content {
-    padding: 2.5rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-.post-category {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
-    padding: 0.4rem 1rem;
-    background: rgba(74, 144, 226, 0.1);
-    color: var(--primary);
-    border-radius: var(--radius-full);
-    font-size: 0.85rem;
-    font-weight: 600;
-    margin-bottom: 1rem;
-    width: fit-content;
-}
-
-.featured-post-title {
-    font-size: 1.8rem; /* Reducir un poco */
-    color: var(--dark);
-    margin-bottom: 1rem;
-    font-weight: 700;
-    line-height: 1.3;
-}
-
-.post-meta {
-    display: flex;
-    gap: 1.5rem;
-    margin-bottom: 1rem;
-    font-size: 0.85rem;
-    color: var(--text-light);
-    flex-wrap: wrap;
-}
-
-.post-meta span {
-    display: flex;
-    align-items: center;
-    gap: 0.3rem;
-}
-
-.featured-post-excerpt {
-    font-size: 0.95rem;
-    color: var(--text-secondary);
-    line-height: 1.7;
-    margin-bottom: 0;
-}
-
-/* ========================================
-   RESPONSIVE - Agregar a responsive.css
-======================================== */
 
 /* Tablets */
 @media (max-width: 1024px) {
